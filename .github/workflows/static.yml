@@ -3,13 +3,15 @@ name: Pushing to GitHub Pages
 on:
   push:
     branches:
-      - main
+      -main
       
 permissions:
   contents: read
   pages: write
+  id-token: write
 
 jobs:
+  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
